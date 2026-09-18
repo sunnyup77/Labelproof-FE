@@ -15,6 +15,15 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div className="layout">
+      {/* Animated Background */}
+      <div className="animated-bg" aria-hidden="true">
+        <div className="animated-bg__flare animated-bg__flare--left" />
+        <div className="animated-bg__flare animated-bg__flare--right" />
+        <div className="animated-bg__orb animated-bg__orb--1" />
+        <div className="animated-bg__orb animated-bg__orb--2" />
+        <div className="animated-bg__orb animated-bg__orb--3" />
+      </div>
+
       <header className="layout-nav">
         <div className="nav-inner container">
           {/* Brand */}
@@ -53,6 +62,7 @@ export function Layout({ children }: LayoutProps) {
               <span>LMPC Rules 2011</span>
               <ExternalLinkIcon />
             </a>
+            <div className="nav-avatar">AS</div>
           </div>
         </div>
       </header>
@@ -62,15 +72,18 @@ export function Layout({ children }: LayoutProps) {
       </main>
 
       <footer className="layout-footer">
-        <div className="container">
-          <p className="footer-disclaimer">
-            LabelCheck is an assist / self-check tool — NOT a legally certified replacement for inspectors.
-            This tool assumes non-exempt retail packaged goods. Verdicts reference the Legal Metrology
-            (Packaged Commodities) Rules, 2011 (Chapter II, Rules 6–17).
-          </p>
-          <p className="footer-meta">
-            Built for SIH 2026 (PS SIH26034) and WeMakeDevs × AWS Bharat Builds Tour
-          </p>
+        <div className="container footer-inner">
+          <div className="footer-left">
+            <LeafIcon />
+            <div className="footer-text-stack">
+              <span className="footer-text-primary">Promoting fair trade & consumer rights</span>
+              <span className="footer-text-secondary">AI for a more transparent marketplace</span>
+            </div>
+          </div>
+          <div className="footer-right">
+            <span className="footer-text-primary">LabelCheck</span>
+            <span className="footer-text-secondary">SIH2024 | WeMakeDevs x AWS Bharat Builds Tour</span>
+          </div>
         </div>
       </footer>
     </div>
@@ -78,6 +91,14 @@ export function Layout({ children }: LayoutProps) {
 }
 
 // --- Inline SVG icons ---
+function LeafIcon() {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-pass)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="footer-leaf">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+    </svg>
+  );
+}
 function ScanIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
