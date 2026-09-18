@@ -4,29 +4,32 @@
   gap: var(--space-5);
 }
 
-/* ── Drop zone ── */
 .dropzone {
   position: relative;
-  border: 2px dashed var(--color-border);
+  border: 2px dashed var(--color-border-light);
   border-radius: var(--radius-xl);
   padding: var(--space-12) var(--space-8);
   text-align: center;
   cursor: pointer;
-  transition: border-color var(--transition-base), background var(--transition-base);
-  background: var(--color-surface);
+  transition: all var(--transition-base);
+  background: rgba(18, 20, 34, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 .dropzone:hover,
 .dropzone:focus-visible {
   border-color: var(--color-accent);
   background: var(--color-accent-bg);
+  box-shadow: var(--shadow-glow);
   outline: none;
+  transform: translateY(-2px);
 }
 
 .dropzone--dragging {
   border-color: var(--color-accent);
   background: var(--color-accent-bg);
-  box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
+  box-shadow: var(--shadow-glow-strong);
+  transform: scale(1.02);
 }
 
 .dropzone--has-file {
@@ -54,19 +57,23 @@
 }
 
 .dropzone__icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .dropzone__title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--color-text-primary);
 }
 
 .dropzone__sub {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
 }
 
 /* ── File info (selected state) ── */
@@ -165,7 +172,7 @@
 .upload-progress__fill {
   height: 100%;
   border-radius: var(--radius-full);
-  background: var(--color-accent);
+  background: var(--gradient-primary);
   transition: width var(--transition-slow);
 }
 

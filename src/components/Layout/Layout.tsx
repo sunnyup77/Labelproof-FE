@@ -19,7 +19,7 @@ export function Layout({ children }: LayoutProps) {
         <div className="nav-inner container">
           {/* Brand */}
           <NavLink to="/" className="nav-brand" aria-label="LabelCheck home">
-            <span className="nav-brand-icon" aria-hidden="true">⚖</span>
+            <span className="nav-brand-icon text-gradient" aria-hidden="true">⚖</span>
             <span className="nav-brand-name">LabelCheck</span>
             <span className="nav-brand-sub hide-mobile">Legal Metrology Compliance</span>
           </NavLink>

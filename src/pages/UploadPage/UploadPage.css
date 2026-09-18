@@ -15,15 +15,16 @@
 }
 
 .upload-page__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   margin-bottom: var(--space-3);
+  line-height: 1.1;
 }
 
 .upload-page__subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-text-secondary);
   line-height: 1.7;
   max-width: 560px;
@@ -58,13 +59,19 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  padding: 4px 0;
 }
 
 .upload-page__check-id {
-  color: var(--color-accent-hover);
-  font-size: 0.7rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
   min-width: 28px;
+  background: var(--color-accent-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  text-align: center;
 }
 
 .upload-page__check-name {
@@ -81,17 +88,28 @@
 }
 
 .upload-page__tips-list {
-  padding-left: var(--space-5);
+  padding-left: var(--space-4);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  list-style: disc;
+  gap: var(--space-3);
+  list-style: none;
 }
 
 .upload-page__tips-list li {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
   line-height: 1.5;
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.upload-page__tips-list li::before {
+  content: '•';
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 @media (max-width: 900px) {

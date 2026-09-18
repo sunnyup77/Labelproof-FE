@@ -44,7 +44,7 @@ export function UploadPage() {
         {/* Left: Form */}
         <div className="upload-page__form-col">
           <div className="upload-page__header">
-            <h1 className="upload-page__title">Scan a Label</h1>
+            <h1 className="upload-page__title">Scan a <span className="text-gradient">Label</span></h1>
             <p className="upload-page__subtitle">
               Upload a packaged commodity label image or PDF. The system extracts mandatory declarations,
               validates them against the Legal Metrology (Packaged Commodities) Rules, 2011,
